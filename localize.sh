@@ -19,7 +19,7 @@ if [ -z $TDBUILD_AAD_APPLICATION_CLIENT_SECRET ]; then
     printf "\n"
 fi
 
-./GetLocalizedFiles.sh -t $TDBUILD_TEAM_ID -u -a $TDBUILD_AAD_APPLICATION_CLIENT_ID -p $TDBUILD_AAD_APPLICATION_CLIENT_SECRET -f FluentUI.Demo/src/main/res/values -r demo -o FluentUI.Demo/src/main/res/values
+./GetLocalizedFiles.sh -t $TDBUILD_TEAM_ID -u -a $TDBUILD_AAD_APPLICATION_CLIENT_ID -p $TDBUILD_AAD_APPLICATION_CLIENT_SECRET -f demo/src/main/res/values -r demo -o demo/src/main/res/values
 ./GetLocalizedFiles.sh -t $TDBUILD_TEAM_ID -u -a $TDBUILD_AAD_APPLICATION_CLIENT_ID -p $TDBUILD_AAD_APPLICATION_CLIENT_SECRET -f fluentui_calendar/src/main/res/values -r fluentui_calendar -o fluentui_calendar/src/main/res/values
 ./GetLocalizedFiles.sh -t $TDBUILD_TEAM_ID -u -a $TDBUILD_AAD_APPLICATION_CLIENT_ID -p $TDBUILD_AAD_APPLICATION_CLIENT_SECRET -f fluentui_ccb/src/main/res/values -r fluentui_ccb -o fluentui_ccb/src/main/res/values
 ./GetLocalizedFiles.sh -t $TDBUILD_TEAM_ID -u -a $TDBUILD_AAD_APPLICATION_CLIENT_ID -p $TDBUILD_AAD_APPLICATION_CLIENT_SECRET -f fluentui_controls/src/main/res/values -r fluentui_controls -o fluentui_controls/src/main/res/values

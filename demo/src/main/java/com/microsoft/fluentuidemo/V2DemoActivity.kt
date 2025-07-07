@@ -47,7 +47,7 @@ open class V2DemoActivity : ComponentActivity() {
     private var activityUrl: String = ""
     fun setupActivity(activityClass: ComponentActivity) {
         activityUrl =
-            "https://github.com/microsoft/fluentui-android/blob/master/FluentUI.Demo/src/main/java/com/microsoft/fluentuidemo/demos/${activityClass::class.simpleName}.kt"
+            "https://github.com/microsoft/fluentui-android/blob/master/demo/src/main/java/com/microsoft/fluentuidemo/demos/${activityClass::class.simpleName}.kt"
     }
 
     private var activityContent: @Composable () -> Unit = {}

@@ -52,7 +52,7 @@ jobs:
         displayName: Hydra Lab UI test
         inputs:
           gradleWrapperFile: "gradlew"
-          tasks: "requestHydraLabTest -PappPath=$(build.sourcesdirectory)/FluentUI.Demo/build/outputs/apk/development/debug/FluentUI.Demo-development-debug.apk -PtestAppPath=$(build.sourcesdirectory)/FluentUI.Demo/build/outputs/apk/androidTest/development/debug/FluentUI.Demo-development-debug-androidTest.apk -PbuildFlavor=$(buildFlavor) -PtestSuiteName=$(testSuiteName) -PrunTimeOutSeconds=$(timeOutSeconds) -PdeviceIdentifier=$(deviceIdentifier) -PgroupTestType=$(groupTestType) -PreportAudience=TestLabOwner -PauthToken=$(authToken) -PpkgName=$(pkgName) -PtestPkgName=$(testPkgName) -PrunningType=$(runningType) -PframeworkType=$(frameworkType) -PhydraLabAPIHost=$(hydraLabAPIHost) -PhydraLabAPISchema=$(hydraLabAPISchema)"
+          tasks: "requestHydraLabTest -PappPath=$(build.sourcesdirectory)/demo/build/outputs/apk/development/debug/demo-development-debug.apk -PtestAppPath=$(build.sourcesdirectory)/demo/build/outputs/apk/androidTest/development/debug/demo-development-debug-androidTest.apk -PbuildFlavor=$(buildFlavor) -PtestSuiteName=$(testSuiteName) -PrunTimeOutSeconds=$(timeOutSeconds) -PdeviceIdentifier=$(deviceIdentifier) -PgroupTestType=$(groupTestType) -PreportAudience=TestLabOwner -PauthToken=$(authToken) -PpkgName=$(pkgName) -PtestPkgName=$(testPkgName) -PrunningType=$(runningType) -PframeworkType=$(frameworkType) -PhydraLabAPIHost=$(hydraLabAPIHost) -PhydraLabAPISchema=$(hydraLabAPISchema)"
           javaHomeOption: "JDKVersion"
           jdkVersionOption: "$(jdkVersion)"
           publishJUnitResults: true
@@ -94,13 +94,13 @@ jobs:
       - task: PublishPipelineArtifact@1
         displayName: "Publish dogfood apk to pipeline"
         inputs:
-          targetPath: "$(build.sourcesdirectory)/FluentUI.Demo/build/outputs/apk/dogfood/release/FluentUI.Demo-dogfood-release.apk"
+          targetPath: "$(build.sourcesdirectory)/demo/build/outputs/apk/dogfood/release/demo-dogfood-release.apk"
           artifact: "dogfood"
           publishLocation: "pipeline"
 
       - task: PublishPipelineArtifact@1
         displayName: "Publish release notes to pipeline"
         inputs:
-          targetPath: "$(build.sourcesdirectory)/FluentUI.Demo/src/main/assets/dogfood-release-notes.txt"
+          targetPath: "$(build.sourcesdirectory)/demo/src/main/assets/dogfood-release-notes.txt"
           artifact: "notes"
           publishLocation: "pipeline"

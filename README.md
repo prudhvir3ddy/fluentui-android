@@ -205,9 +205,9 @@ In XML:
 
 ## Demo app
 
-Included in this repository is a demo of currently implemented controls. A full list of implemented controls available in the demo can be found here:  [Demos](FluentUI.Demo/src/main/java/com/microsoft/fluentuidemo/demos).
+Included in this repository is a demo of currently implemented controls. A full list of implemented controls available in the demo can be found here:  [Demos](demo/src/main/java/com/microsoft/fluentuidemo/demos).
 
-To see samples of all of our implemented controls and design language, run the [FluentUI.Demo](FluentUI.Demo) module in Android Studio.
+To see samples of all of our implemented controls and design language, run the [demo](demo) module in Android Studio.
 
 ## Modularization
 Starting from version 0.0.12, Fluent UI has been split into multiple modules by grouping related controls together. The main objective of this is to reduce the size impact of library on the applications which want to use only specific controls from Fluent UI
